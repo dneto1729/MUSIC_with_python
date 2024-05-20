@@ -4,10 +4,32 @@ Example Python scripts for the analysis of data from the ANL MUSIC detector.
 
 WORK IN PROGRESS!
 
+## Requirments
+
+The scripts here use several well-known Python packages (NumPy, SciPy, Pandas, sci-kit-learn, seaborn). To read/write ROOT files you will need to install [uproot](https://pypi.org/project/uproot/). Since these experiment files are often quite large (several GB), anything saved after pulling from the ROOT container is done in the Apache Arrow, a binary file format, using [PyArrow](https://arrow.apache.org/docs/python/index.html), which can natively be read/write with Pandas. Finally, since it is always nice to have progress bars, some of these scripts use [tqdm](https://github.com/tqdm/tqdm), which is a really nice lightweight package for progress bars. I have typically found installing packages the least painful with pip, but doing so after the initial environment setup through conda. An example of setting up the Python environment would be something like this
+
+```
+conda create --name music_py python=3.8
+conda activate music_py
+```
+then install the common Python packages
+```
+conda install numpy scipy pandas matplotlib seaborn jupyter pip
+```
+then use pip to install the rest
+```
+pip install uproot pyarrow tqdm
+```
+
+
 ## Argonne MUSIC Detector
 For more information on the MUSIC detector, see [Nucl. Instrum. Meth. A 799, 197 (2015)](https://doi.org/10.1016/j.nima.2015.07.030) about the use of MUSIC with radioactive beams, and see [Nucl. Instrum. Meth. A 859, 63 (2017)](https://doi.org/10.1016/j.nima.2017.03.060) to learn more about the use of MUSIC to measure ($\alpha$,p) and ($\alpha$,n) reactions.
 
 ## FAQ
+
+Q: Why use uproot instead of just using ROOT directly with PyROOT?
+
+A: One could certainly just install ROOT and with PyROOT basically do all the same things (using functions from NumPy, SciPy, scikit-learn, etc...). Though, you could then ask yourself, why use PyROOT to access some function from NumPy when ROOT already has inbuilt functions to do stats and numerical analysis? First, it never hurts to have an alternative. Second, getting ROOT to run on Windows is never easy; with uproot, you can open, read, and write ROOT files all within Python. Third, there are a ton of really cool Python packages that can do things "out of the box," which, in a lot of cases, you would have to build from scratch to replicate with ROOT or C++.  
 
 Q: Why should I use Python instead of the standard particle physics code ROOT?
 
