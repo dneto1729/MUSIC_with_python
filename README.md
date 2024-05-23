@@ -6,21 +6,25 @@ WORK IN PROGRESS!
 
 ## Requirments
 
-The scripts here use several well-known Python packages (NumPy, SciPy, Pandas, sci-kit-learn, seaborn). To read/write ROOT files, you will need to install [uproot](https://pypi.org/project/uproot/). Since these experiment files are often quite large (several GB), anything saved after pulling from the ROOT container is done in the Apache Arrow format using [PyArrow](https://arrow.apache.org/docs/python/index.html), which can natively be read/write with Pandas. Finally, since it is always nice to have progress bars, some of these scripts use [tqdm](https://github.com/tqdm/tqdm), which is a really nice lightweight package for progress bars. I have typically found installing packages the least painful with pip, but doing so after the initial environment setup through conda. An example of setting up the Python environment would be something like this
+The scripts here use several well-known Python packages (NumPy, SciPy, Pandas, sci-kit-learn, seaborn). To read/write ROOT files, you will need to install [uproot](https://pypi.org/project/uproot/). Since these experiment files are often quite large (several GB), anything saved after pulling from the ROOT container is done in the Apache Arrow format using [PyArrow](https://arrow.apache.org/docs/python/index.html), which can natively be read/write with Pandas. Finally, since it is always nice to have progress bars, some of these scripts use [tqdm](https://github.com/tqdm/tqdm), which is a nice lightweight package for progress bars. I have typically found installing packages the least painful with pip, but doing so after the initial environment setup through conda. An example of setting up the Python environment would be something like this.
 
 ```
 conda create --name music_py python=3.8
 conda activate music_py
 ```
-then install the common Python packages with conda
+Then install the standard Python packages with conda
 ```
 conda install numpy scipy pandas matplotlib seaborn jupyter pip
 ```
-then use pip to install the rest
+Then use pip to install the rest
 ```
 pip install uproot pyarrow tqdm
 ```
-of course, one could use only pip or conda for environment and package installation if one prefers.
+Of course, one could use only pip or conda for environment and package installation.
+
+## Working with Uproot
+A lot of the examples here build off of the excellent [Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/). For more info on uproot you can also take a look at the [uproot documentation](https://uproot.readthedocs.io/en/latest/index.html). 
+
 
 ## Argonne MUSIC Detector
 For more information on the MUSIC detector, see [Nucl. Instrum. Meth. A 799, 197 (2015)](https://doi.org/10.1016/j.nima.2015.07.030) about the use of MUSIC with radioactive beams, and see [Nucl. Instrum. Meth. A 859, 63 (2017)](https://doi.org/10.1016/j.nima.2017.03.060) to learn more about the use of MUSIC to measure ($\alpha$,p) and ($\alpha$,n) reactions.
@@ -29,12 +33,12 @@ For more information on the MUSIC detector, see [Nucl. Instrum. Meth. A 799, 197
 
 Q: Why use uproot instead of just using ROOT directly with PyROOT?
 
-A: One could certainly just install ROOT and with PyROOT basically do all the same things (using functions from NumPy, SciPy, scikit-learn, etc...). Though, you could then ask yourself, why use PyROOT to access some function from NumPy when ROOT already has inbuilt functions to do stats and numerical analysis? First, it never hurts to have an alternative. Second, getting ROOT to run on Windows is never easy; with uproot, you can open, read, and write ROOT files all within Python. Third, there are a ton of really cool Python packages that can do things "out of the box," which, in a lot of cases, you would have to build from scratch to replicate with ROOT or C++.  
+A: One could certainly install ROOT and with PyROOT do all the same things (using functions from NumPy, SciPy, scikit-learn, etc...). However, you could then ask yourself, why use PyROOT to access some functions from NumPy when ROOT already has built-in functions to do stats and numerical analysis? First, it never hurts to have an alternative. Second, getting ROOT to run on Windows is always challenging; with uproot, you can open, read, and write ROOT files all within Python. Third, there are a ton of really cool Python packages that can do things "out of the box," which, in many cases, you would have to build from scratch to replicate with ROOT or C++.  
 
 Q: Why should I use Python instead of the standard particle physics code ROOT?
 
-A: There is no difference in doing analysis on experimental data with ROOT or Python. At the end of the day you want to get some measurable (cross section, mass, charge, yield, etc...) choice of code should not matter. I prefer Python; most other people work with ROOT. If you want to see an example of some very nice ROOT scripts to analyze MUSIC data, see [MUSIC_CoMPASS_softwares](https://github.com/CFougeres/MUSIC_CoMPASS_softwares).
+A: There is no difference in analyzing experimental data with ROOT or Python. At the end of the day you want to get some measurable (cross section, mass, charge, yield, etc...) choice of code should not matter. I prefer Python; most other people work with ROOT. If you want to see an example of some very nice ROOT scripts to analyze MUSIC data, see [MUSIC_CoMPASS_softwares](https://github.com/CFougeres/MUSIC_CoMPASS_softwares).
 
 Q: Why did you write these as "simple" scripts? Why not a library or something more like a package?
 
-A: I would definitely not claim the code here is perfect or even optimal. This should be treated as a set of minimal viable beta scripts. I do plan to refactor these into a nicer format at some point. But, for the moment, these are here to give an idea of how to work with MUSIC data within Python.
+A: I would not claim the code here is perfect or even optimal. This should be treated as a set of minimal viable beta scripts. I do plan to refactor these into a nicer format at some point. But, for the moment, these are here to give an idea of how to work with MUSIC data within Python.
