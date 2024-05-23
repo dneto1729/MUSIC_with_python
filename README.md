@@ -23,7 +23,7 @@ pip install uproot pyarrow tqdm
 Of course, one could use only pip or conda for environment and package installation.
 
 ## Working with Uproot
-A lot of the examples here build off of the excellent [Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/). For more info on uproot you can also take a look at the [uproot documentation](https://uproot.readthedocs.io/en/latest/index.html). 
+A lot of the examples here build off of the excellent [Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/) by Mason Proffitt. For more info on uproot you can also take a look at the [uproot documentation](https://uproot.readthedocs.io/en/latest/index.html). 
 
 
 ## Argonne MUSIC Detector
