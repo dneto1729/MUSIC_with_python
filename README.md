@@ -23,7 +23,7 @@ pip install uproot pyarrow tqdm
 Of course, one could use only pip or conda for environment and package installation.
 
 ## Working with Uproot
-Some of the examples here build off of the excellent [Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/) by Mason Proffitt. For more info on uproot you can also take a look at the [uproot documentation](https://uproot.readthedocs.io/en/latest/index.html). 
+Some of the examples here build off of the excellent [Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/) by Mason Proffitt. For more info on uproot, you can also take a look at the [uproot documentation](https://uproot.readthedocs.io/en/latest/index.html). 
 
 
 ## Argonne MUSIC Detector
@@ -33,12 +33,12 @@ For more information on the MUSIC detector, see [Nucl. Instrum. Meth. A 799, 197
 
 Q: Why use uproot instead of just using ROOT directly with PyROOT?
 
-A: One could certainly install ROOT and with PyROOT do all the same things (using functions from NumPy, SciPy, scikit-learn, etc...). However, you could then ask yourself, why use PyROOT to access some functions from NumPy when ROOT already has built-in functions to do stats and numerical analysis? First, it never hurts to have an alternative. Second, getting ROOT to run on Windows is always challenging; with uproot, you can open, read, and write ROOT files all within Python. Third, there are a ton of really cool Python packages that can do things "out of the box," which, in many cases, you would have to build from scratch to replicate with ROOT or C++.  
+A: One could certainly install ROOT and, with PyROOT, do many of the same things (using functions from NumPy, SciPy, scikit-learn, etc...). However, you could then ask yourself, why use PyROOT to access some functions from NumPy when ROOT already has built-in stats and numerical analysis functions? First, it never hurts to have an alternative. Second, getting ROOT to run on Windows is always challenging; with uproot, you can open, read, and write ROOT files all within Python. Third, there are a ton of really cool Python packages that can do things "out of the box," which, in many cases, you would have to build from scratch to replicate with ROOT or C++.  
 
 Q: Why should I use Python instead of the standard particle physics code ROOT?
 
-A: There is no difference in analyzing experimental data with ROOT or Python. At the end of the day you want to get some measurable (cross section, mass, charge, yield, etc...) choice of code should not matter. I prefer Python; most other people work with ROOT. If you want to see an example of some very nice ROOT scripts to analyze MUSIC data, see [MUSIC_CoMPASS_softwares](https://github.com/CFougeres/MUSIC_CoMPASS_softwares).
+A: There is no difference in analyzing experimental data with ROOT or Python. At the end of the day, you want to get some measurable (cross section, mass, charge, yield, etc...) choice of code should not matter. I prefer Python; most other people work with ROOT. If you want to see an example of some very nice ROOT scripts to analyze MUSIC data, see [MUSIC_CoMPASS_softwares](https://github.com/CFougeres/MUSIC_CoMPASS_softwares).
 
 Q: Why did you write these as "simple" scripts? Why not a library or something more like a package?
 
-A: I would not claim the code here is perfect or even optimal. This should be treated as a set of minimal viable beta scripts. I do plan to refactor these into a nicer format at some point. But, for the moment, these are here to give an idea of how to work with MUSIC data within Python.
+A: I would not claim the code here is perfect or even optimal. This should be treated as a set of minimal viable beta scripts. I do plan to refactor these into a nicer format at some point. But, for the moment, these are here to give an idea of how to work with MUSIC data using Python.
