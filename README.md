@@ -1,12 +1,13 @@
 # MUSIC_with_python
 ![Examples of some plots using Matplotlib and Seaborn of MUSIC data.](./doc/img/image_main.jpg)
-Example Python scripts for the analysis of data from the ANL MUSIC detector.
+
+A collection of example Python scripts and tutorials on using Python to analyze data from the ANL MUSIC detector.
 
 WORK IN PROGRESS!
 
 ## Requirements
 
-The scripts here use several well-known Python packages (NumPy, SciPy, Pandas, sci-kit-learn, seaborn). To read/write ROOT files, you will need to install [uproot](https://pypi.org/project/uproot/). Since these experiment files are often quite large (several GB), anything saved after pulling from the ROOT container is done in the Apache Arrow format using [PyArrow](https://arrow.apache.org/docs/python/index.html), which can natively be read/write with Pandas. Finally, since it is always nice to have progress bars, some of these scripts use [tqdm](https://github.com/tqdm/tqdm), which is a nice lightweight package for progress bars. I have typically found installing packages the least painful with pip, but doing so after the initial environment setup through conda. An example of setting up the Python environment would be something like this.
+The scripts here use several well-known Python packages (NumPy, SciPy, Pandas, sci-kit-learn, seaborn). To read/write ROOT files, you must install [uproot](https://pypi.org/project/uproot/). Since these experiment files are often quite large (several GB), anything saved after pulling from the ROOT container is done in the Apache Arrow format using [PyArrow](https://arrow.apache.org/docs/python/index.html), which can natively be read/write with Pandas. Finally, since it is always nice to have progress bars, some of these scripts use [tqdm](https://github.com/tqdm/tqdm), a lightweight package for progress bars. I have typically found installing packages the least painful with pip, but doing so after the initial environment setup through conda. An example of setting up the Python environment would be something like this.
 
 ```
 conda create --name music_py python=3.8
@@ -23,7 +24,7 @@ pip install uproot pyarrow tqdm
 Of course, one could use only pip or conda for environment and package installation.
 
 ## Working with Uproot
-Some of the examples here build off of the excellent [Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/) by Mason Proffitt. For more info on uproot, you can also take a look at the [uproot documentation](https://uproot.readthedocs.io/en/latest/index.html). 
+Some of the examples here build off of the excellent [Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/) by Mason Proffitt. For more info on uproot, you can look at the [uproot documentation](https://uproot.readthedocs.io/en/latest/index.html). 
 
 
 ## Argonne MUSIC Detector
