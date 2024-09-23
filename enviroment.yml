@@ -1,0 +1,17 @@
+name: music_py
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - jupyter
+  - matplotlib
+  - notebook
+  - numpy
+  - pandas
+  - pip
+  - pyarrow
+  - scipy
+  - seaborn
+  - tqdm
+  - uproot

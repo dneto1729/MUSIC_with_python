@@ -1,0 +1,10 @@
+jupyter
+matplotlib
+notebook
+numpy
+pandas
+pyarrow
+scipy
+seaborn
+tqdm
+uproot==5.4.0
