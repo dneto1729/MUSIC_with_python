@@ -18,7 +18,7 @@ You can check out the first example notebook on binder
 The scripts here use several well-known Python packages (NumPy, SciPy, Pandas, sci-kit-learn, seaborn). To read/write ROOT files, you must install [uproot](https://pypi.org/project/uproot/). Since these experiment files are often quite large (several GB), anything saved after pulling from the ROOT container is done in the Apache Arrow format using [PyArrow](https://arrow.apache.org/docs/python/index.html), which can natively be read/write with Pandas. Finally, since it is always nice to have progress bars, some of these scripts use [tqdm](https://github.com/tqdm/tqdm), a lightweight package for progress bars. I have typically found installing packages the least painful with pip, but doing so after the initial environment setup through conda. An example of setting up the Python environment would be something like this.
 
 ```
-conda create --name music_py python=3.8
+conda create --name music_py python=3.10
 conda activate music_py
 ```
 Then install the standard Python packages with conda
@@ -32,7 +32,7 @@ pip install uproot pyarrow tqdm
 Of course, one could use only pip or conda for environment and package installation.
 
 ## Working with Uproot
-Some of the examples here build off of the excellent [Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/) by Mason Proffitt. For more info on uproot, you can look at the [uproot documentation](https://uproot.readthedocs.io/en/latest/index.html). 
+Some of the examples here build off of the excellent [Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/) by Mason Proffitt. For more info on uproot, see the [uproot documentation](https://uproot.readthedocs.io/en/latest/index.html). 
 
 
 ## Argonne MUSIC Detector
@@ -46,7 +46,7 @@ A: One could certainly install ROOT and, with PyROOT, do many of the same things
 
 Q: Why should I use Python instead of the standard particle physics code ROOT?
 
-A: There is no difference in analyzing experimental data with ROOT or Python. At the end of the day, you want to get some measurable (cross section, mass, charge, yield, etc...) choice of code should not matter. I prefer Python; most other people work with ROOT. If you want to see an example of some very nice ROOT scripts to analyze MUSIC data, see [MUSIC_CoMPASS_softwares](https://github.com/CFougeres/MUSIC_CoMPASS_softwares).
+A: There is no difference in analyzing experimental data with ROOT or Python. Ultimately, if you want to get some measurable (cross section, mass, charge, yield, etc.), the choice of code should not matter. I prefer Python; most other people work with ROOT. If you want to see an example of some very nice ROOT scripts to analyze MUSIC data, see [MUSIC_CoMPASS_softwares](https://github.com/CFougeres/MUSIC_CoMPASS_softwares).
 
 Q: Why did you write these as "simple" scripts? Why not a library or something more like a package?
 
