@@ -25,14 +25,14 @@ git clone https://github.com/dneto1729/MUSIC_with_python.git
 ```
 and cd in the new directory
 ```
-cd <path>/MUSIC_with_python/
+cd /MUSIC_with_python
 ```
 ### Using Conda:
-To install a [new environment using Conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) and the included enviroment.yml file do:
+To install a [new environment using Conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) using the included enviroment.yml file do:
 ```
 conda env create -f environment.yml
 ```
-Where you can then activate the new environment with
+With the packages installed, you can then activate the new environment with
 ```
 conda activate music_py
 ```
@@ -41,11 +41,11 @@ First, create and activate an environment with Conda by doing:
 ```
 conda create -n music_py python=3.9
 ```
-Then, activate the new environment
+Then, activate the new environment:
 ```
 conda activate music_py
 ```
-Using pip with the requirements.txt file, install the necessary packages and dependencies with
+Using pip with the requirements.txt file, install the necessary packages and dependencies with:
 ```
 pip install -r requirements.txt
 ```
