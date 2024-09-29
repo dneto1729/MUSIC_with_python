@@ -21,7 +21,7 @@ The tutorials and scripts here use several well-known Python packages (NumPy, Sc
 
 You can use Conda, a combination of Conda with pip, or the native Python environment tool venv in conjunction with pip. First, clone the repo
 ```
-git clone
+git clone https://github.com/dneto1729/MUSIC_with_python.git
 ```
 and cd in the new directory
 ```
@@ -45,7 +45,7 @@ Then, activate the new environment
 ```
 conda activate music_py
 ```
-Using pip with the requirements.txt file setup the necessary packages and dependencies with
+Using pip with the requirements.txt file, install the necessary packages and dependencies with
 ```
 pip install -r requirements.txt
 ```
