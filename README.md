@@ -15,28 +15,51 @@ You can check out the first example notebook on binder
 
 ## Requirements
 
-The scripts here use several well-known Python packages (NumPy, SciPy, Pandas, sci-kit-learn, seaborn). To read/write ROOT files, you must install [uproot](https://pypi.org/project/uproot/). Since these experiment files are often quite large (several GB), anything saved after pulling from the ROOT container is done in the Apache Arrow format using [PyArrow](https://arrow.apache.org/docs/python/index.html), which can natively be read/write with Pandas. Finally, since it is always nice to have progress bars, some of these scripts use [tqdm](https://github.com/tqdm/tqdm), a lightweight package for progress bars. I have typically found installing packages the least painful with pip, but doing so after the initial environment setup through conda. An example of setting up the Python environment would be something like this.
+The scripts here use several well-known Python packages (NumPy, SciPy, Pandas, sci-kit-learn, seaborn). To read/write ROOT files, you must install [uproot](https://pypi.org/project/uproot/). Since these experiment files are often quite large (several GB), anything saved after pulling from the ROOT container is done in the Apache Arrow format using [PyArrow](https://arrow.apache.org/docs/python/index.html), which can natively be read/write with Pandas. Finally, since it is always nice to have progress bars, some of these scripts use [tqdm](https://github.com/tqdm/tqdm), a lightweight package for progress bars. 
 
+## Setup
+
+You can use Conda, a combination of Conda with pip, or the native Python environment tool venv in conjunction with pip. First, clone the repo
 ```
-conda create --name music_py python=3.10
+git clone
+```
+and cd in the new directory
+```
+cd <path>/MUSIC_with_python/
+```
+### Using Conda:
+To install a [new environment using Conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) and the included enviroment.yml file do:
+```
+conda env create -f environment.yml
+```
+Where you can then activate the new environment with
+```
 conda activate music_py
 ```
-Then install the standard Python packages with conda
+### Create an environment with Conda but handle packages with pip.
+First, create and activate an environment with Conda by doing:
 ```
-conda install numpy scipy pandas matplotlib seaborn jupyter pip
+conda create -n music_py python=3.10
 ```
-Then use pip to install the rest
+Then, activate the new environment
 ```
-pip install uproot pyarrow tqdm
+conda activate music_py
 ```
-Of course, one could use only pip or conda for environment and package installation.
-
-## Working with Uproot
-Some of the examples here build off of the excellent [Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/) by Mason Proffitt. For more info on uproot, see the [uproot documentation](https://uproot.readthedocs.io/en/latest/index.html). 
-
+Using pip with the requirements.txt file setup the necessary packages and dependencies with
+```
+pip install -r requirements.txt
+```
+### Using venv and pip.
+Using venv is slightly more OS dependent. However, it comes with the advantage of being a native Python package, so if you can't install Conda, it is a useful alternative. [To set up an enviroment with venv follow the instructions here for your OS](https://docs.python.org/3/library/venv.html). Then, in your new environment, you can install the packages and dependencies using pip with the included requirement.txt file by doing the following:
+```
+pip install -r requirements.txt
+```
 
 ## Argonne MUSIC Detector
 For more information on the MUSIC detector, see [Nucl. Instrum. Meth. A 799, 197 (2015)](https://doi.org/10.1016/j.nima.2015.07.030) about the use of MUSIC with radioactive beams, and see [Nucl. Instrum. Meth. A 859, 63 (2017)](https://doi.org/10.1016/j.nima.2017.03.060) to learn more about the use of MUSIC to measure ($\alpha$,p) and ($\alpha$,n) reactions.
+
+## Working with Uproot
+Some of the examples here build off of the excellent [Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/) by Mason Proffitt. For more info on uproot, see the [uproot documentation](https://uproot.readthedocs.io/en/latest/index.html). 
 
 ## FAQ
 
