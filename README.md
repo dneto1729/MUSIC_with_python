@@ -1,5 +1,5 @@
 # MUSIC_with_python
-[![python](https://img.shields.io/badge/Python-3.10-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
+[![python](https://img.shields.io/badge/Python-3.9-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
 [![jupyter](https://img.shields.io/badge/Jupyter-Lab-F37626.svg?style=flat&logo=Jupyter)](https://jupyterlab.readthedocs.io/en/stable)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -39,7 +39,7 @@ conda activate music_py
 ### Create an environment with Conda but handle packages with pip.
 First, create and activate an environment with Conda by doing:
 ```
-conda create -n music_py python=3.10
+conda create -n music_py python=3.9
 ```
 Then, activate the new environment
 ```
@@ -50,7 +50,7 @@ Using pip with the requirements.txt file setup the necessary packages and depend
 pip install -r requirements.txt
 ```
 ### Using venv and pip.
-Using venv is slightly more OS dependent. However, it comes with the advantage of being a native Python package, so if you can't install Conda, it is a useful alternative. [To set up an enviroment with venv follow the instructions here for your OS](https://docs.python.org/3/library/venv.html). Then, in your new environment, you can install the packages and dependencies using pip with the included requirement.txt file by doing the following:
+Using venv is slightly more OS dependent. However, it comes with the advantage of being a native Python package, so it is a useful alternative if you can't install Conda. [To set up an enviroment with venv follow the instructions here for your OS](https://docs.python.org/3/library/venv.html). Then, in your new environment, you can install the packages and dependencies using pip with the included requirement.txt file by doing the following:
 ```
 pip install -r requirements.txt
 ```
