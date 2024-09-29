@@ -11,7 +11,7 @@ WORK IN PROGRESS!
 
 You can check out the first example notebook on binder
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dneto1729/MUSIC_with_python/main?labpath=examples%2F1+-+Looking+at+a+MUSIC+ROOT+data+file+with+uproot.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dneto1729/MUSIC_with_python/main?labpath=tutorials%2F1+-+Looking+at+a+MUSIC+ROOT+data+file+with+uproot.ipynb)
 
 ## Requirements
 
