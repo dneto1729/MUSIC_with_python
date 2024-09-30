@@ -25,7 +25,7 @@ git clone https://github.com/dneto1729/MUSIC_with_python.git
 ```
 and cd in the new directory
 ```
-cd /MUSIC_with_python
+cd MUSIC_with_python
 ```
 ### Using Conda:
 To install a [new environment using Conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) using the included enviroment.yml file do:
