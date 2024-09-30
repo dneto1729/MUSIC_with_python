@@ -15,7 +15,7 @@ You can check out the first example notebook on binder
 
 ## Requirements
 
-The tutorials and scripts here use several well-known Python packages (NumPy, SciPy, Pandas, sci-kit-learn, seaborn). To read/write ROOT files, you must install [uproot](https://pypi.org/project/uproot/). Since these experiment files are often quite large (several GB), anything saved after pulling from the ROOT container is done in the Apache Arrow format using [PyArrow](https://arrow.apache.org/docs/python/index.html), which can natively be read/write with Pandas. Finally, since it is always nice to have progress bars, some of these scripts use [tqdm](https://github.com/tqdm/tqdm), a lightweight package for progress bars. 
+The tutorials and scripts here use several well-known Python packages (NumPy, SciPy, Pandas, scikit-learn, seaborn). To read/write ROOT files, you must install [uproot](https://pypi.org/project/uproot/). Since these experiment files are often quite large (several GB), anything saved after pulling from the ROOT container is done in the Apache Arrow format using [PyArrow](https://arrow.apache.org/docs/python/index.html), which can natively be read/write with Pandas. Finally, since it is always nice to have progress bars, some of these scripts use [tqdm](https://github.com/tqdm/tqdm), a lightweight package for progress bars. 
 
 ## Setup
 
