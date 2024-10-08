@@ -36,7 +36,7 @@ With the packages installed, you can then activate the new environment with
 ```
 conda activate music_py
 ```
-### Create an environment with Conda but handle packages with pip.
+### Create an environment with Conda but handle packages with pip:
 First, create and activate an environment with Conda by doing:
 ```
 conda create -n music_py python=3.9
@@ -49,8 +49,8 @@ Using pip with the requirements.txt file, install the necessary packages and dep
 ```
 pip install -r requirements.txt
 ```
-### Using venv and pip.
-Using venv is slightly more OS dependent. However, it comes with the advantage of being a native Python package, so it is a useful alternative if you can't install Conda. [To set up an enviroment with venv follow the instructions here for your OS](https://docs.python.org/3/library/venv.html). Then, in your new environment, you can install the packages and dependencies using pip with the included requirement.txt file by doing the following:
+### Using venv and pip:
+Using venv is slightly more OS dependent. However, it comes with the advantage of being a native Python package, so it is a useful alternative if you can't install Conda. [To set up an environment with venv, follow the instructions here for your OS](https://docs.python.org/3/library/venv.html). Then, in your new environment, you can install the packages and dependencies using pip with the included requirement.txt file by doing the following:
 ```
 pip install -r requirements.txt
 ```
