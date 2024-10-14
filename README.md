@@ -5,7 +5,7 @@
 
 ![Examples of some plots using Matplotlib and Seaborn of MUSIC data.](./doc/img/image_main.jpg)
 
-A collection of example Python scripts and tutorials on using Python to analyze data from the ANL MUSIC detector.
+A collection of example Python tutorials and scripts using Python to analyze data from the ANL MUSIC detector.
 
 WORK IN PROGRESS!
 
@@ -37,7 +37,7 @@ With the packages installed, you can then activate the new environment with
 conda activate music_py
 ```
 ### Create an environment with Conda but handle packages with pip:
-First, create and activate an environment with Conda by doing:
+First, create and activate an environment with Conda by doing the following:
 ```
 conda create -n music_py python=3.9
 ```
@@ -50,7 +50,7 @@ Using pip with the requirements.txt file, install the necessary packages and dep
 pip install -r requirements.txt
 ```
 ### Using venv and pip:
-Using venv is slightly more OS dependent. However, it comes with the advantage of being a native Python package, so it is a useful alternative if you can't install Conda. [To set up an environment with venv, follow the instructions here for your OS](https://docs.python.org/3/library/venv.html). Then, in your new environment, you can install the packages and dependencies using pip with the included requirement.txt file by doing the following:
+Using venv is slightly more OS dependent. However, it comes with the advantage of being a native Python package, so it is a useful alternative if you can't install Conda. To set up an environment with venv [follow the instructions here for your OS](https://docs.python.org/3/library/venv.html). Then, in your new environment, you can install the packages and dependencies using pip with the included requirement.txt file by doing the following:
 ```
 pip install -r requirements.txt
 ```
@@ -65,7 +65,7 @@ Some of the examples here build off of the excellent [Uproot Tutorial](https://m
 
 Q: Why use uproot instead of just using ROOT directly with PyROOT?
 
-A: One could certainly install ROOT and, with PyROOT, do many of the same things (using functions from NumPy, SciPy, scikit-learn, etc...). However, you could then ask yourself, why use PyROOT to access some functions from NumPy when ROOT already has built-in stats and numerical analysis functions? First, it never hurts to have an alternative. Second, getting ROOT to run on Windows is always challenging; with uproot, you can open, read, and write ROOT files all within Python. Third, there are a ton of really cool Python packages that can do things "out of the box," which, in many cases, you would have to build from scratch to replicate with ROOT or C++.  
+A: One could certainly install ROOT and, with PyROOT, do many of the same things (using functions from NumPy, SciPy, scikit-learn, etc...). However, why use PyROOT to access some functions from NumPy when ROOT already has built-in stats and numerical analysis functions? First, it never hurts to have an alternative. Second, getting ROOT to run on Windows is always challenging; with uproot, you can open, read, and write ROOT files all within Python. Third, there are a ton of really cool Python packages that can do things "out of the box," which, in many cases, you would have to build from scratch to replicate with ROOT or C++.  
 
 Q: Why should I use Python instead of the standard particle physics code ROOT?
 
