@@ -37,7 +37,7 @@ With the packages installed, you can then activate the new environment with
 conda activate music_py
 ```
 ### Create an environment with Conda but handle packages with pip:
-First, create and activate an environment with Conda by doing the following:
+First, create an environment with Conda by doing the following:
 ```
 conda create -n music_py python=3.9
 ```
