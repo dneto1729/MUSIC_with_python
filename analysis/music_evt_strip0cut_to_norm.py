@@ -80,8 +80,7 @@ def main():
         # center bins
         cen_bins = bins[:-1] + np.diff(bins) / 2
         # Fit
-        # with full_output = False, always returns a 2-tuple
-        # # pylint: disable-next=unbalanced-tuple-unpacking
+        # pylint: disable-next=unbalanced-tuple-unpacking
         param, _ = curve_fit(gauss, cen_bins, counts,
                         p0=(max_counts, bins[max_indx], 10))
         # Get Mean of Gauss
@@ -109,8 +108,7 @@ def main():
         cen_bins = bins[:-1] + np.diff(bins) / 2
         cen_bins_short = bins_short[:-1] + np.diff(bins_short) / 2
         # Fit
-        # with full_output = False, always returns a 2-tuple
-        # # pylint: disable-next=unbalanced-tuple-unpacking
+        # pylint: disable-next=unbalanced-tuple-unpacking
         param, _ = curve_fit(gauss, cen_bins, counts,
                         p0=(max_counts, bins[max_indx], 10))
         # Get Mean of Gauss
