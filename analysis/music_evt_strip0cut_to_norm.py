@@ -49,16 +49,16 @@ def main():
     else:
         file_name = sys.argv[1]
 
-    print('=====================================================================')
+    print('=' * 80)
     print('Opening ' + file_name)
-    print('=====================================================================')
+    print('=' * 80)
 
     df = pd.read_feather(file_name)
     print(df.describe())
 
     norm_to = 500.0
     print(f'Normalizing Beam to {norm_to}')
-    print('=====================================================================')
+    print('=' * 80)
 
     # Setting up some arrays
     beam_strips = []
@@ -124,13 +124,13 @@ def main():
         plt.close()
 
     print('Normalized')
-    print('=====================================================================')
+    print('=' * 80)
     print(df.describe())
 
     # Save dataframe to feather file
     file_save_name = file_name[:-8] + '_norm.feather'
     print('Saving to ' + file_save_name)
-    print('=====================================================================')
+    print('=' * 80)
     df.to_feather(file_save_name)
 
 if __name__ == "__main__":
