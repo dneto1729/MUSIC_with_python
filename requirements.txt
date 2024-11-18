@@ -1,3 +1,4 @@
+joblib
 jupyter
 matplotlib==3.7.2
 notebook
