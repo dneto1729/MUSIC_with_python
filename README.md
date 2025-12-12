@@ -7,15 +7,13 @@
 
 A collection of example Python tutorials and scripts using Python to analyze data from the ANL MUSIC detector.
 
-WORK IN PROGRESS!
-
 You can check out the first example notebook on binder
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dneto1729/MUSIC_with_python/main?labpath=tutorials%2F1+-+Looking+at+a+MUSIC+ROOT+data+file+with+uproot.ipynb)
 
 ## Requirements
 
-The tutorials and scripts here use several well-known Python packages (NumPy, SciPy, Pandas, scikit-learn, seaborn). To read/write ROOT files, you must install [uproot](https://pypi.org/project/uproot/). Since these experiment files are often quite large (several GB), anything saved after pulling from the ROOT container is done in the Apache Arrow format using [PyArrow](https://arrow.apache.org/docs/python/index.html), which can natively be read/write with Pandas. Finally, since it is always nice to have progress bars, some of these scripts use [tqdm](https://github.com/tqdm/tqdm), a lightweight package for progress bars. 
+The tutorials and scripts here use several well-known Python packages (NumPy, SciPy, pandas, scikit-learn, seaborn). To read/write ROOT files, you must install [uproot](https://pypi.org/project/uproot/). Since these experiment files are often quite large (several GB), anything saved after pulling from the ROOT container is done in the Apache Arrow format using [PyArrow](https://arrow.apache.org/docs/python/index.html), which can natively be read/write with Pandas. Finally, since it is always nice to have progress bars, some of these scripts use [tqdm](https://github.com/tqdm/tqdm), a lightweight package for progress bars. 
 
 ## Setup
 
@@ -65,12 +63,12 @@ Some of the examples here build off of the excellent [Uproot Tutorial](https://m
 
 Q: Why use uproot instead of just using ROOT directly with PyROOT?
 
-A: One could certainly install ROOT and, with PyROOT, do many of the same things (using functions from NumPy, SciPy, scikit-learn, etc...). However, why use PyROOT to access some functions from NumPy when ROOT already has built-in stats and numerical analysis functions? First, it never hurts to have an alternative. Second, getting ROOT to run on Windows is always challenging; with uproot, you can open, read, and write ROOT files all within Python. Third, there are a ton of really cool Python packages that can do things "out of the box," which, in many cases, you would have to build from scratch to replicate with ROOT or C++.  
+A: One could certainly install ROOT and, with PyROOT, do many of the same things (using functions from NumPy, SciPy, scikit-learn, etc...). However, one follow up question might be why use PyROOT to access some functions from something like NumPy when ROOT already has built-in stats and numerical analysis functions? First, it never hurts to have an alternative. Second, getting ROOT to run on Windows is not always easy; with uproot, you can open, read, and write ROOT files all within Python (on Windows/OSX/Linux). Third, there are a ton of really cool Python packages that can do things "out of the box," which, in many cases, you would have to build from scratch to replicate with ROOT or C++.  
 
 Q: Why should I use Python instead of the standard particle physics code ROOT?
 
-A: There is no difference in analyzing experimental data with ROOT or Python. Ultimately, if you want to get some measurable (cross section, mass, charge, yield, etc.), the choice of code should not matter. I prefer Python; most other people work with ROOT. If you want to see an example of some very nice ROOT scripts to analyze MUSIC data, see [MUSIC_CoMPASS_softwares](https://github.com/CFougeres/MUSIC_CoMPASS_softwares).
+A: There is no difference in analyzing experimental data with ROOT or Python. Ultimately, if you are analyzing data to determine a cross section, mass, charge, yield, etc..., the choice of code should not matter. I prefer Python; most other people work with ROOT. If you want to see an example of some very nice ROOT scripts to analyze MUSIC data, see [MUSIC_CoMPASS_softwares](https://github.com/CFougeres/MUSIC_CoMPASS_softwares).
 
 Q: Why did you write these as "simple" scripts? Why not a library or something more like a package?
 
-A: I would not claim the code here is perfect or even optimal. This should be treated as a set of minimal viable beta scripts. I do plan to refactor these into a nicer format at some point. But, for the moment, these are here to give an idea of how to work with MUSIC data using Python.
+A: I would not claim the code here is perfect or even optimal. This should be treated as a set of minimal viable scripts. I do plan to refactor these into a nicer format at some point. But, for the moment, these are here to give an idea of how to work with MUSIC data using Python.
