@@ -56,6 +56,9 @@ pip install -r requirements.txt
 ## Argonne MUSIC Detector
 For more information on the MUSIC detector, see [Nucl. Instrum. Meth. A 799, 197 (2015)](https://doi.org/10.1016/j.nima.2015.07.030) about the use of MUSIC with radioactive beams, and see [Nucl. Instrum. Meth. A 859, 63 (2017)](https://doi.org/10.1016/j.nima.2017.03.060) to learn more about the use of MUSIC to measure ($\alpha$,p) and ($\alpha$,n) reactions.
 
+### MUSIC Detector Simulation
+A code to simulate events in the MUSIC detector can be found here: [MUSIC detector simulation code](https://gitlab.phy.anl.gov/music/sim/-/tree/master?ref_type=heads)
+
 ## Working with Uproot
 Some of the examples here build off of the excellent [Uproot Tutorial](https://masonproffitt.github.io/uproot-tutorial/) by Mason Proffitt. For more info on uproot, see the [uproot documentation](https://uproot.readthedocs.io/en/latest/index.html). 
 
