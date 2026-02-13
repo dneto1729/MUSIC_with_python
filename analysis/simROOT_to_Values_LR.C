@@ -20,7 +20,7 @@
 
 using namespace std;
 
-int Values_LR(string RFile){
+int simROOT_to_Values_LR(string RFile){
     // Get branch from simulation data
     TFile *f1 = new TFile(RFile.c_str());
     TTree *simt = (TTree *)f1->Get("simt");
